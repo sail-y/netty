@@ -26,3 +26,7 @@ hs_err_pid*
 build/
 
 .idea
+out/
+.gradle/
+gen-java/
+gen-py/

@@ -46,6 +46,14 @@ dependencies {
     )
 }
 
+sourceSets {
+    main {
+        proto {
+            srcDir 'src/main/java'
+        }
+    }
+}
+
 
 protobuf {
     protoc {
@@ -58,7 +66,12 @@ protobuf {
     }
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                outputSubDir = "java"
+            }
+
         }
     }
+
+    generatedFilesBaseDir = "src"
 }

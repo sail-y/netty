@@ -24,6 +24,31 @@ public final class StudentProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_sail_proto_MyResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sail_proto_StudentRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sail_proto_StudentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sail_proto_StudentResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sail_proto_StudentResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sail_proto_StudentResponseList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sail_proto_StudentResponseList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sail_proto_StreamRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sail_proto_StreamRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sail_proto_StreamResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sail_proto_StreamResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -32,13 +57,26 @@ public final class StudentProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\rStudent.proto\022\016com.sail.proto\"\035\n\tMyReq" +
       "uest\022\020\n\010username\030\001 \001(\t\"\036\n\nMyResponse\022\020\n\010" +
-      "realname\030\002 \001(\t2b\n\016StudentService\022P\n\025GetR" +
-      "ealNameByUsername\022\031.com.sail.proto.MyReq" +
-      "uest\032\032.com.sail.proto.MyResponse\"\000B \n\016co" +
-      "m.sail.protoB\014StudentProtoP\001b\006proto3"
+      "realname\030\002 \001(\t\"\035\n\016StudentRequest\022\013\n\003age\030" +
+      "\001 \001(\005\":\n\017StudentResponse\022\014\n\004name\030\001 \001(\t\022\013" +
+      "\n\003age\030\002 \001(\005\022\014\n\004city\030\003 \001(\t\"O\n\023StudentResp" +
+      "onseList\0228\n\017studentResponse\030\001 \003(\0132\037.com." +
+      "sail.proto.StudentResponse\"%\n\rStreamRequ" +
+      "est\022\024\n\014request_info\030\001 \001(\t\"\'\n\016StreamRespo" +
+      "nse\022\025\n\rresponse_info\030\001 \001(\t2\357\002\n\016StudentSe" +
+      "rvice\022P\n\025GetRealNameByUsername\022\031.com.sai",
+      "l.proto.MyRequest\032\032.com.sail.proto.MyRes" +
+      "ponse\"\000\022W\n\020GetStudentsByAge\022\036.com.sail.p" +
+      "roto.StudentRequest\032\037.com.sail.proto.Stu" +
+      "dentResponse\"\0000\001\022c\n\030GetStudentsWrapperBy" +
+      "Ages\022\036.com.sail.proto.StudentRequest\032#.c" +
+      "om.sail.proto.StudentResponseList\"\000(\001\022M\n" +
+      "\006BiTalk\022\035.com.sail.proto.StreamRequest\032\036" +
+      ".com.sail.proto.StreamResponse\"\000(\0010\001B \n\016" +
+      "com.sail.protoB\014StudentProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,13 +95,43 @@ public final class StudentProto {
     internal_static_com_sail_proto_MyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sail_proto_MyRequest_descriptor,
-        new String[] { "Username", });
+        new java.lang.String[] { "Username", });
     internal_static_com_sail_proto_MyResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_sail_proto_MyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sail_proto_MyResponse_descriptor,
-        new String[] { "Realname", });
+        new java.lang.String[] { "Realname", });
+    internal_static_com_sail_proto_StudentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_sail_proto_StudentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sail_proto_StudentRequest_descriptor,
+        new java.lang.String[] { "Age", });
+    internal_static_com_sail_proto_StudentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_sail_proto_StudentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sail_proto_StudentResponse_descriptor,
+        new java.lang.String[] { "Name", "Age", "City", });
+    internal_static_com_sail_proto_StudentResponseList_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_sail_proto_StudentResponseList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sail_proto_StudentResponseList_descriptor,
+        new java.lang.String[] { "StudentResponse", });
+    internal_static_com_sail_proto_StreamRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_sail_proto_StreamRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sail_proto_StreamRequest_descriptor,
+        new java.lang.String[] { "RequestInfo", });
+    internal_static_com_sail_proto_StreamResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_sail_proto_StreamResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sail_proto_StreamResponse_descriptor,
+        new java.lang.String[] { "ResponseInfo", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

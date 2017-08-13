@@ -4,18 +4,18 @@
 package com.sail.proto;
 
 /**
- * Protobuf type {@code com.sail.proto.MyResponse}
+ * Protobuf type {@code com.sail.proto.StreamResponse}
  */
-public  final class MyResponse extends
+public  final class StreamResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.sail.proto.MyResponse)
-    MyResponseOrBuilder {
-  // Use MyResponse.newBuilder() to construct.
-  private MyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // @@protoc_insertion_point(message_implements:com.sail.proto.StreamResponse)
+    StreamResponseOrBuilder {
+  // Use StreamResponse.newBuilder() to construct.
+  private StreamResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private MyResponse() {
-    realname_ = "";
+  private StreamResponse() {
+    responseInfo_ = "";
   }
 
   @java.lang.Override
@@ -23,7 +23,7 @@ public  final class MyResponse extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-  private MyResponse(
+  private StreamResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -43,10 +43,10 @@ public  final class MyResponse extends
             }
             break;
           }
-          case 18: {
+          case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            realname_ = s;
+            responseInfo_ = s;
             break;
           }
         }
@@ -62,44 +62,44 @@ public  final class MyResponse extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.sail.proto.StudentProto.internal_static_com_sail_proto_MyResponse_descriptor;
+    return com.sail.proto.StudentProto.internal_static_com_sail_proto_StreamResponse_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.sail.proto.StudentProto.internal_static_com_sail_proto_MyResponse_fieldAccessorTable
+    return com.sail.proto.StudentProto.internal_static_com_sail_proto_StreamResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.sail.proto.MyResponse.class, com.sail.proto.MyResponse.Builder.class);
+            com.sail.proto.StreamResponse.class, com.sail.proto.StreamResponse.Builder.class);
   }
 
-  public static final int REALNAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object realname_;
+  public static final int RESPONSE_INFO_FIELD_NUMBER = 1;
+  private volatile java.lang.Object responseInfo_;
   /**
-   * <code>string realname = 2;</code>
+   * <code>string response_info = 1;</code>
    */
-  public java.lang.String getRealname() {
-    java.lang.Object ref = realname_;
+  public java.lang.String getResponseInfo() {
+    java.lang.Object ref = responseInfo_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      realname_ = s;
+      responseInfo_ = s;
       return s;
     }
   }
   /**
-   * <code>string realname = 2;</code>
+   * <code>string response_info = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getRealnameBytes() {
-    java.lang.Object ref = realname_;
+      getResponseInfoBytes() {
+    java.lang.Object ref = responseInfo_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      realname_ = b;
+      responseInfo_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -118,8 +118,8 @@ public  final class MyResponse extends
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getRealnameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, realname_);
+    if (!getResponseInfoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, responseInfo_);
     }
   }
 
@@ -128,8 +128,8 @@ public  final class MyResponse extends
     if (size != -1) return size;
 
     size = 0;
-    if (!getRealnameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, realname_);
+    if (!getResponseInfoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, responseInfo_);
     }
     memoizedSize = size;
     return size;
@@ -141,14 +141,14 @@ public  final class MyResponse extends
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.sail.proto.MyResponse)) {
+    if (!(obj instanceof com.sail.proto.StreamResponse)) {
       return super.equals(obj);
     }
-    com.sail.proto.MyResponse other = (com.sail.proto.MyResponse) obj;
+    com.sail.proto.StreamResponse other = (com.sail.proto.StreamResponse) obj;
 
     boolean result = true;
-    result = result && getRealname()
-        .equals(other.getRealname());
+    result = result && getResponseInfo()
+        .equals(other.getResponseInfo());
     return result;
   }
 
@@ -159,65 +159,65 @@ public  final class MyResponse extends
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + REALNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getRealname().hashCode();
+    hash = (37 * hash) + RESPONSE_INFO_FIELD_NUMBER;
+    hash = (53 * hash) + getResponseInfo().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.sail.proto.MyResponse parseFrom(
+  public static com.sail.proto.StreamResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.sail.proto.MyResponse parseFrom(
+  public static com.sail.proto.StreamResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.sail.proto.MyResponse parseFrom(byte[] data)
+  public static com.sail.proto.StreamResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.sail.proto.MyResponse parseFrom(
+  public static com.sail.proto.StreamResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.sail.proto.MyResponse parseFrom(java.io.InputStream input)
+  public static com.sail.proto.StreamResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.sail.proto.MyResponse parseFrom(
+  public static com.sail.proto.StreamResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.sail.proto.MyResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.sail.proto.StreamResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.sail.proto.MyResponse parseDelimitedFrom(
+  public static com.sail.proto.StreamResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.sail.proto.MyResponse parseFrom(
+  public static com.sail.proto.StreamResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.sail.proto.MyResponse parseFrom(
+  public static com.sail.proto.StreamResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +229,7 @@ public  final class MyResponse extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.sail.proto.MyResponse prototype) {
+  public static Builder newBuilder(com.sail.proto.StreamResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -244,25 +244,25 @@ public  final class MyResponse extends
     return builder;
   }
   /**
-   * Protobuf type {@code com.sail.proto.MyResponse}
+   * Protobuf type {@code com.sail.proto.StreamResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.sail.proto.MyResponse)
-      com.sail.proto.MyResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.sail.proto.StreamResponse)
+      com.sail.proto.StreamResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.sail.proto.StudentProto.internal_static_com_sail_proto_MyResponse_descriptor;
+      return com.sail.proto.StudentProto.internal_static_com_sail_proto_StreamResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.sail.proto.StudentProto.internal_static_com_sail_proto_MyResponse_fieldAccessorTable
+      return com.sail.proto.StudentProto.internal_static_com_sail_proto_StreamResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.sail.proto.MyResponse.class, com.sail.proto.MyResponse.Builder.class);
+              com.sail.proto.StreamResponse.class, com.sail.proto.StreamResponse.Builder.class);
     }
 
-    // Construct using com.sail.proto.MyResponse.newBuilder()
+    // Construct using com.sail.proto.StreamResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -279,31 +279,31 @@ public  final class MyResponse extends
     }
     public Builder clear() {
       super.clear();
-      realname_ = "";
+      responseInfo_ = "";
 
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.sail.proto.StudentProto.internal_static_com_sail_proto_MyResponse_descriptor;
+      return com.sail.proto.StudentProto.internal_static_com_sail_proto_StreamResponse_descriptor;
     }
 
-    public com.sail.proto.MyResponse getDefaultInstanceForType() {
-      return com.sail.proto.MyResponse.getDefaultInstance();
+    public com.sail.proto.StreamResponse getDefaultInstanceForType() {
+      return com.sail.proto.StreamResponse.getDefaultInstance();
     }
 
-    public com.sail.proto.MyResponse build() {
-      com.sail.proto.MyResponse result = buildPartial();
+    public com.sail.proto.StreamResponse build() {
+      com.sail.proto.StreamResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public com.sail.proto.MyResponse buildPartial() {
-      com.sail.proto.MyResponse result = new com.sail.proto.MyResponse(this);
-      result.realname_ = realname_;
+    public com.sail.proto.StreamResponse buildPartial() {
+      com.sail.proto.StreamResponse result = new com.sail.proto.StreamResponse(this);
+      result.responseInfo_ = responseInfo_;
       onBuilt();
       return result;
     }
@@ -335,18 +335,18 @@ public  final class MyResponse extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.sail.proto.MyResponse) {
-        return mergeFrom((com.sail.proto.MyResponse)other);
+      if (other instanceof com.sail.proto.StreamResponse) {
+        return mergeFrom((com.sail.proto.StreamResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.sail.proto.MyResponse other) {
-      if (other == com.sail.proto.MyResponse.getDefaultInstance()) return this;
-      if (!other.getRealname().isEmpty()) {
-        realname_ = other.realname_;
+    public Builder mergeFrom(com.sail.proto.StreamResponse other) {
+      if (other == com.sail.proto.StreamResponse.getDefaultInstance()) return this;
+      if (!other.getResponseInfo().isEmpty()) {
+        responseInfo_ = other.responseInfo_;
         onChanged();
       }
       onChanged();
@@ -361,11 +361,11 @@ public  final class MyResponse extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.sail.proto.MyResponse parsedMessage = null;
+      com.sail.proto.StreamResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.sail.proto.MyResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.sail.proto.StreamResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -375,71 +375,71 @@ public  final class MyResponse extends
       return this;
     }
 
-    private java.lang.Object realname_ = "";
+    private java.lang.Object responseInfo_ = "";
     /**
-     * <code>string realname = 2;</code>
+     * <code>string response_info = 1;</code>
      */
-    public java.lang.String getRealname() {
-      java.lang.Object ref = realname_;
+    public java.lang.String getResponseInfo() {
+      java.lang.Object ref = responseInfo_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        realname_ = s;
+        responseInfo_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string realname = 2;</code>
+     * <code>string response_info = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getRealnameBytes() {
-      java.lang.Object ref = realname_;
+        getResponseInfoBytes() {
+      java.lang.Object ref = responseInfo_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        realname_ = b;
+        responseInfo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string realname = 2;</code>
+     * <code>string response_info = 1;</code>
      */
-    public Builder setRealname(
+    public Builder setResponseInfo(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      realname_ = value;
+      responseInfo_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string realname = 2;</code>
+     * <code>string response_info = 1;</code>
      */
-    public Builder clearRealname() {
+    public Builder clearResponseInfo() {
       
-      realname_ = getDefaultInstance().getRealname();
+      responseInfo_ = getDefaultInstance().getResponseInfo();
       onChanged();
       return this;
     }
     /**
-     * <code>string realname = 2;</code>
+     * <code>string response_info = 1;</code>
      */
-    public Builder setRealnameBytes(
+    public Builder setResponseInfoBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      realname_ = value;
+      responseInfo_ = value;
       onChanged();
       return this;
     }
@@ -454,39 +454,39 @@ public  final class MyResponse extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.sail.proto.MyResponse)
+    // @@protoc_insertion_point(builder_scope:com.sail.proto.StreamResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.sail.proto.MyResponse)
-  private static final com.sail.proto.MyResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.sail.proto.StreamResponse)
+  private static final com.sail.proto.StreamResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.sail.proto.MyResponse();
+    DEFAULT_INSTANCE = new com.sail.proto.StreamResponse();
   }
 
-  public static com.sail.proto.MyResponse getDefaultInstance() {
+  public static com.sail.proto.StreamResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<MyResponse>
-      PARSER = new com.google.protobuf.AbstractParser<MyResponse>() {
-    public MyResponse parsePartialFrom(
+  private static final com.google.protobuf.Parser<StreamResponse>
+      PARSER = new com.google.protobuf.AbstractParser<StreamResponse>() {
+    public StreamResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MyResponse(input, extensionRegistry);
+        return new StreamResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<MyResponse> parser() {
+  public static com.google.protobuf.Parser<StreamResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<MyResponse> getParserForType() {
+  public com.google.protobuf.Parser<StreamResponse> getParserForType() {
     return PARSER;
   }
 
-  public com.sail.proto.MyResponse getDefaultInstanceForType() {
+  public com.sail.proto.StreamResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
