@@ -1,0 +1,28 @@
+version: '2'
+services:
+  zookeeper:
+    restart: always
+    image: wurstmeister/zookeeper
+    #container_name: zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    restart: always
+    image: wurstmeister/kafka
+    #container_name: kafka
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_NUM_PARTITIONS: 1
+      KAFKA_BROKER_ID: 1
+      KAFKA_LOG_RETENTION_MINUTES: 30
+      KAFKA_LOG_RETENTION_BYTES: 104857600
+    mem_limit: '2000M'
+    ports:
+      - "9092:9092"
+                        
+
+                        

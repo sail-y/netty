@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  * @author yangfan
  * @date 2017/05/22
  */
-public class MyChatClient {
+public class  MyChatClient {
     public static void main(String[] args) throws Exception {
         // 客户端只需要一个EventLoopGroup
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
