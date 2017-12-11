@@ -18,5 +18,10 @@ public class ByteBufTest0 {
         for (int i = 0; i < buffer.capacity(); i++) {
             System.out.println(buffer.getByte(i));
         }
+
+        //
+        for (int i = 0; i < buffer.capacity(); i++) {
+            System.out.println(buffer.readByte());
+        }
     }
 }
