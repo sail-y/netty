@@ -1,4 +1,4 @@
-package com.sail.netty.secondexample;
+package com.sail.netty.handler;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -6,10 +6,6 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
-/**
- * @author yangfan
- * @date 2017/05/22
- */
 public class MyClient {
     public static void main(String[] args) throws InterruptedException {
         // 客户端只需要一个EventLoopGroup
