@@ -18,8 +18,9 @@ public class MyByteToLongDecoder extends ByteToMessageDecoder {
         System.out.println(in.readableBytes());
 
         // Long是8个字节
-        if (in.readableBytes() >=8 ) {
+        if (in.readableBytes() >= 8) {
             out.add(in.readLong());
         }
+
     }
 }

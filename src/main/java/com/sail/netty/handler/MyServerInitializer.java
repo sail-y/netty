@@ -15,7 +15,8 @@ public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline pipeline = ch.pipeline();
-        pipeline.addLast(new MyByteToLongDecoder());
+        pipeline.addLast(new MyByteToLongDecoder2());
+        pipeline.addLast(new MyLongToStringDecoder());
         pipeline.addLast(new MyLongToByteEncoder());
         // 需要将字节转换为Long
         pipeline.addLast(new MyServerHandler());

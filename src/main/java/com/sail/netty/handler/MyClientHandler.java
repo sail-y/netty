@@ -5,10 +5,10 @@ import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.time.LocalDateTime;
 
-public class MyClientHandler extends SimpleChannelInboundHandler<Long> {
+public class MyClientHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Long msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         System.out.println("read message: " + msg);
     }
 
