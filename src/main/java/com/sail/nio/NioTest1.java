@@ -4,6 +4,8 @@ import java.nio.IntBuffer;
 import java.security.SecureRandom;
 
 /**
+ * 输出10个随机数，输出很简单，但是包含的逻辑却很丰富。
+ *
  * @author yangfan
  * @date 2017/08/13
  */
